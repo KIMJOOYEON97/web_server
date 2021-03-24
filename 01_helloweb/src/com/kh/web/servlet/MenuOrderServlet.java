@@ -21,6 +21,7 @@ public class MenuOrderServlet extends HttpServlet{
 		String side = request.getParameter("side_menu");
 		String drink = request.getParameter("drink_menu");
 		
+		//출력식으로 확인
 		   	System.out.println("main= "+main );
 	        System.out.println("side= "+side );
 	        System.out.println("drink= "+drink );
@@ -38,8 +39,8 @@ public class MenuOrderServlet extends HttpServlet{
 		case "어니언링" : sum += 1700;break;
 		}
 		switch(drink) {
-		case "콜라" : sum += 1000;break;
-		case "사이다" : sum += 1000;break;
+		case "콜라" :
+		case "사이다" : sum += 1000;break; //switch fall-through
 		case "커피" : sum += 1500;break;
 		case "밀크쉐이크" : sum += 2500;break;
 		}
@@ -50,9 +51,9 @@ public class MenuOrderServlet extends HttpServlet{
 		request.setAttribute("side", side);
 		request.setAttribute("drink", drink);
 		
-		//html 작성을 jsp에 위임
+		//html 작성을 jsp에 위임 처리 RequestDispatcher
 		RequestDispatcher reqDispatcher
-			= request.getRequestDispatcher("/servlet/menuOrder.jsp");
+			= request.getRequestDispatcher("/menu/menuOrder.jsp");
 		reqDispatcher.forward(request, response);
 		
 	}

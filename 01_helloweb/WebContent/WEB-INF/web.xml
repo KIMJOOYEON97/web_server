@@ -24,11 +24,11 @@
   </servlet-mapping>
   
  <servlet>
-      <servlet-name>MenuOrderServlet</servlet-name>
+      <servlet-name>MenuOrder</servlet-name>
       <servlet-class>com.kh.web.servlet.MenuOrderServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-      <servlet-name>MenuOrderServlet</servlet-name>
+      <servlet-name>MenuOrder</servlet-name>
       <url-pattern>/menuOrder.do</url-pattern>
   </servlet-mapping>
   

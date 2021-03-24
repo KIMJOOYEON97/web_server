@@ -60,8 +60,8 @@ th,td {border:1px solid black; padding:10px;}
 		</tr>
 	</table>
 	<br /><br />
-	
-	<form name="menuFrm" action="/web/menuOrder.do" method="POST">
+	<!-- 사용자 입력값을 넘겨줄때는 /web/menuOrder.do 다 적어줘야한다. 그리고 반드시 method를 적어줘야 405에러가 안뜬다-->
+	<form name="menuFrm" action="/web/menuOrder.do" method="GET">
 		메인메뉴 : 
 		<select id="main_menu" name="main_menu" required>
 			<option value="" disabled selected>햄버거를 선택하세요.</option>
