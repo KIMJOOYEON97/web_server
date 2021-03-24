@@ -60,7 +60,9 @@ th,td {border:1px solid black; padding:10px;}
 		</tr>
 	</table>
 	<br /><br />
-	<!-- 사용자 입력값을 넘겨줄때는 /web/menuOrder.do 다 적어줘야한다. 그리고 반드시 method를 적어줘야 405에러가 안뜬다-->
+	<!-- 사용자 입력값을 넘겨줄때는 /web/menuOrder.do 다 적어줘야한다. 그리고  method를 적어주고 
+															반드시 method와 doGet doPost 맞춰줘야한다. 
+															405에러가 안뜬다-->
 	<form name="menuFrm" action="/web/menuOrder.do" method="GET">
 		메인메뉴 : 
 		<select id="main_menu" name="main_menu" required>
