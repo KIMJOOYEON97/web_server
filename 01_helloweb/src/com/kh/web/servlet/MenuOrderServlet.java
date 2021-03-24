@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 public class MenuOrderServlet extends HttpServlet{
 	
 	@Override
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 		throws ServletException, IOException{
 		//0. encoding 선언
 		request.setCharacterEncoding("utf-8");
